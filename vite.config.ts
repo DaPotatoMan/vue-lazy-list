@@ -36,7 +36,7 @@ export default defineConfig({
       },
 
       rollupOptions: {
-         external: ['vue', 'lodash-es'],
+         external: ['vue', 'fast-equals'],
          output: {
             globals: {
                vue: 'Vue'

@@ -5,7 +5,7 @@ Lazily load your list! <b>Supports only Vue 3</b>
 
 ## 🚀 Features
 
-- ⚡ **Ultra-fast & Lightweight**: Under 3kb without Gzip, [see bundle stats.](https://bundlephobia.com/package/vue-lazy-list)
+- ⚡ **Ultra-fast & Lightweight**: Under 2kb gzipped, [see bundle stats.](https://bundlephobia.com/package/vue-lazy-list)
 - 🦾 **Type Strong**: Written in [Typescript](https://www.typescriptlang.org/), with [TS Docs.](https://github.com/microsoft/tsdoc)
 - 🔋 **Automatic Unload**: Invisible elements are unloaded.
 

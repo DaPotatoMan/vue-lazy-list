@@ -14,7 +14,7 @@ export default {
 
 <script lang="ts" setup>
 import { ComputedRef } from 'vue';
-import { isEqual } from 'lodash-es';
+import { shallowEqual } from 'fast-equals';
 import LazyListObserver from './LazyListObserver.vue';
 
 const props = defineProps({
@@ -61,7 +61,7 @@ function reset() {
 
 if (props.resetOnChange) {
    const stop = watch(() => props.listData, (newVal, oldVal) => {
-      if (isEqual((newVal), (oldVal))) return;
+      if (shallowEqual((newVal), (oldVal))) return;
       reset();
    });
 
