@@ -1,0 +1,18 @@
+{
+   "keywords": [
+      "vue",
+      "vue3",
+      "lazy list",
+      "infinite list",
+      "lightweight"
+   ],
+   "main": "./lib.umd.js",
+   "module": "./lib.es.js",
+   "typings": "./src/index",
+   "exports": {
+      ".": {
+         "import": "./lib.es.js",
+         "require": "./lib.umd.js"
+      }
+   }
+}
