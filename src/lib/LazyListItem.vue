@@ -14,11 +14,16 @@ export default {
 import { useObserver } from './utils';
 
 const props = defineProps({
+   /** Minimum height of element.
+    * @default 0 */
    minHeight: {
       type: Number,
       default: 0,
       required: true
    },
+
+   /** Delay of time (ms) before element is unrendered
+    * @default 10000 */
    unrenderDelay: {
       type: Number,
       default: 10000,

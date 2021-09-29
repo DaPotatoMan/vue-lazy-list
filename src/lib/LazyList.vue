@@ -18,38 +18,42 @@ import { shallowEqual } from 'fast-equals';
 import LazyListObserver from './LazyListObserver.vue';
 
 const props = defineProps({
-   listData: {
+   /** List dataset to use */
+   dataset: {
       type: Array,
       default: () => [],
       required: true
    },
 
+   /** UID to set as key. Defaults to index value */
    uid: {
       type: String,
       default: null,
-      required: true
    },
 
+   /** Number of loaded on initial render */
    initialItems: {
       type: Number,
       default: 10
    },
 
+   /** Number of items to load on intersection */
    buffer: {
       type: Number,
       default: 5
    },
 
+   /** Creates a watcher to reset index when whole data updates */
    resetOnChange: Boolean
 });
 
 const index = ref(props.initialItems);
-const items = computed(() => props.listData.slice(0, index.value)) as ComputedRef<any[]>;
+const items = computed(() => props.dataset.slice(0, index.value)) as ComputedRef<any[]>;
 
 // Methods
 function onIntersect() {
    const newIndex = index.value + props.buffer;
-   const data = props.listData.slice(index.value, newIndex);
+   const data = props.dataset.slice(index.value, newIndex);
 
    items.value.push(...data);
    index.value = newIndex;
@@ -60,7 +64,7 @@ function reset() {
 }
 
 if (props.resetOnChange) {
-   const stop = watch(() => props.listData, (newVal, oldVal) => {
+   const stop = watch(() => props.dataset, (newVal, oldVal) => {
       if (shallowEqual((newVal), (oldVal))) return;
       reset();
    });

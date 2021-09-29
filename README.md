@@ -19,7 +19,7 @@ npm i vue-lazy-list
 
 ```vue
 <template>
-  <LazyList v-slot="{ data, index }" :list-data="list" :initial-items="15" :buffer="5">
+  <LazyList v-slot="{ data, index }" :dataset="list" :initial-items="15" :buffer="5">
     <LazyListItem :unrender-delay="3000" :min-height="50" class="item-wrapper">
       {{ data }}
     </LazyListItem>
