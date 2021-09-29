@@ -1,5 +1,5 @@
+<h3 align="center">Vue Lazy List</h3>
 <p align="center">
-<h3>Vue Lazy List</h3>
 Lazily load your list! <b>Supports only Vue 3</b>
 </p>
 
