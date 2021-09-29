@@ -5,6 +5,7 @@ async function handlePackageJSON() {
       'name',
       'version',
       'author',
+      'description',
       'respository',
       'homepage',
       'bugs',
