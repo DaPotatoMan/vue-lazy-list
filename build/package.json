@@ -14,5 +14,8 @@
          "import": "./lib.es.js",
          "require": "./lib.umd.js"
       }
+   },
+   "dependencies": {
+      "fast-equals": "latest"
    }
 }
